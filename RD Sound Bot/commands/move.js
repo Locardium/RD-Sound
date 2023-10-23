@@ -28,8 +28,10 @@ module.exports =
         if (!ChannelArg) return interaction.reply({content: 'Channel ID error'});
 
         let User = interaction.guild.members.cache.get(UserArg);
-
         if (!User) return interaction.reply({content: 'User not exist'});
+
+        let Channel = interaction.guild.channels.cache.get(ChannelArg)
+        if (!Channel && ChannelArg != "0") return interaction.reply({content: 'Channel not exist'});
 
         if (ChannelArg == "0")
         {
