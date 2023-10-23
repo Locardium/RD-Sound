@@ -1,0 +1,17 @@
+{
+  "name": "SecretsFilesBot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "",
+  "dependencies": {
+    "discord.js": "14.11.0",
+    "express": "^4.17.1",
+    "keygenerator": "^1.0.4"
+  }
+}

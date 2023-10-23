@@ -1,0 +1,18 @@
+{
+	"commands": {
+		"permisions": {
+			"admins": [
+				"0"
+			]
+		}
+	},
+	"bot": {
+		"token": "",
+		"footerLogo": "https://cdn.discordapp.com/attachments/1067147829597966400/1166133009326547004/a_c72fdfe39d47267b2ec2eac76f7d2baa.gif?ex=654960ff&is=6536ebff&hm=ab93da70a07f4b49cce0f3918f44550c99de8ddc1d6d7fd2ee18765a034794a3&",
+		"prefix": "."
+	},
+	"website": {
+		"mainurl": "http://localhost/",
+		"port": 80
+	}
+}
