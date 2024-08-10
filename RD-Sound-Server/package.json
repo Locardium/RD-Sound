@@ -1,6 +1,6 @@
 {
-  "name": "SecretsFilesBot",
-  "version": "1.0.0",
+  "name": "rd-sound",
+  "version": "2.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -12,6 +12,7 @@
   "dependencies": {
     "discord.js": "14.11.0",
     "express": "^4.17.1",
-    "keygenerator": "^1.0.4"
+    "keygenerator": "^1.0.4",
+    "uuid": "^10.0.0"
   }
 }
