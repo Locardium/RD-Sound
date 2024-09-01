@@ -4,6 +4,8 @@ This is a code I used quite a while ago at a Roblox event. Since I no longer wor
 
 What does this code do?? It allows you to have several areas on your Roblox map and so when the player changes areas using a Discord bot, the user changes the channel.
 
+> Use v1 or wait for fix.
+
 ## How this work
 First, the player receives a code that must be verified through Discord. Once the user is verified, the script sends a command to Discord when the user moves zones for the bot to move them to another channel.
 
