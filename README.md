@@ -8,13 +8,12 @@ What does this code do?? It allows you to have several areas on your Roblox map 
 First, the player receives a code that must be verified through Discord. Once the user is verified, the script sends a command to Discord when the user moves zones for the bot to move them to another channel.
 
 ## Installation
-> Use v1 or wait for fix.
 - Install [RZones](https://github.com/Locardium/RZones) in your game.
 
 - Download the files in the [Release](https://github.com/locardium/RD-Sound/releases/tag/v2.0.0) section.
 - Make sure you have "[NodeJS](https://nodejs.org/es)" installed on your computer.
 - Open the `RD-Sound-Server` folder and run the `Install-package.bat` file.
-- Open the `Config.json` file.
+- Open the `config.json` file.
      - In the `admins` section in `commands -> permissions -> admins` add your Discord id.
      - In the `token` section in `"bot -> token` add the TOKEN of your Discord bot.
 - Open the file `Start.bat`. (Make sure the bot has permissions to "View channels", "Manage channels", Manage webhooks", "Send messages")
