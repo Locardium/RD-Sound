@@ -39,6 +39,7 @@ local sgFolder = Instance.new("Folder")
 sgFolder.Parent = game.StarterGui
 sgFolder.Name = "RDSound-SG"
 
+menuFolder.VerifyMenu.Enabled = not Settings.roblox.testing
 menuFolder.VerifyMenu.Parent = sgFolder
 
 --Starter Player Scripts

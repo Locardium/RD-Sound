@@ -1,2 +1,4 @@
 RD-Sound-Server/node_modules/
 RD-Sound-Server/package-lock.json
+RD-Sound-Server/pnpm-lock.yaml
+RD-Sound-Server/config.json

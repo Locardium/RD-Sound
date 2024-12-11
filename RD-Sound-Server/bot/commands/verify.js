@@ -1,5 +1,5 @@
 const { EmbedBuilder } = require('discord.js');
-const Config = require('../../Config.json');
+const Config = require('../../config.json');
 const Functions = require('../others/functions');
 const fs = require('fs');
 

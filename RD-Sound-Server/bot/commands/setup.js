@@ -1,5 +1,5 @@
 const { EmbedBuilder } = require('discord.js');
-const Config = require('../../Config.json');
+const Config = require('../../config.json');
 const Functions = require('../others/functions');
 const fs = require('fs');
 const { v4: uuidv4 } = require('uuid');
@@ -51,7 +51,7 @@ module.exports =
 
         Config.roblox = {token: uuidv4(), guildId: interaction.guildId};
 
-        fs.writeFileSync('./Config.json', JSON.stringify(Config, null, "\t"));
+        fs.writeFileSync('./config.json', JSON.stringify(Config, null, "\t"));
 
         let dmMessage = await Functions.GetUser(interaction).send({content: `**TOKEN**: ||\`${Config.roblox.token}\`||. Message delete in 15 sec.`, ephemeral: false});
 

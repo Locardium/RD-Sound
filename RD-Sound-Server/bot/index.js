@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 const { REST } = require("@discordjs/rest");
-const { Routes } = require("discord-api-types/v9");
-const config = require('../Config.json');
+const { Routes } = require("discord-api-types/v10");
+const config = require('../config.json');
 let fs = require('fs');
 const { GetUser } = require("./others/functions");
 

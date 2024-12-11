@@ -1,4 +1,4 @@
-const Config = require('../../Config.json');
+const Config = require('../../config.json');
 
 module.exports.GetUser = (interaction) => {
     if (typeof interaction.author !== "undefined") return interaction.author;

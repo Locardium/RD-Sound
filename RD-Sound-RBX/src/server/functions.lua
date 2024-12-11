@@ -43,7 +43,7 @@ end
 function Functions.sendData(option, args)
 	local URL = string.format("%s%s?token=%s&option=%s&%s", Settings.server.host, "rdsound-sd", Settings.server.token, option, tableToQuery(args))
 	local success, result = pcall(HttpService.GetAsync, HttpService, URL)
-	
+
 	if (not success) then
 		warn(result)
 	elseif (success) then

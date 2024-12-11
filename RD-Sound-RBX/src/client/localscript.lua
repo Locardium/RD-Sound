@@ -40,20 +40,27 @@ local buttonPressed = false
 
 local menu = Players.LocalPlayer.PlayerGui:WaitForChild("RDSound-SG").VerifyMenu
 
+local verified = false
+
+game.StarterGui:SetCore("ResetButtonCallback", false)
+
 --Remote event
 RemoteEvent.OnClientEvent:Connect(function(option, ...)
 	if (option == "setCode") then
-		local code = ...
+		local Code = ...
 		local menuIntances = menu:GetDescendants()
 		for i = 1, #menuIntances do
 			local ins = menuIntances[i]
 			if (ins:IsA("TextLabel")) then
 				if (ins.Text:match("%[CODE%]")) then
-					ins.Text = ins.Text:gsub("%[CODE%]", code)
+					ins.Text = ins.Text:gsub("%[CODE%]", Code)
 				end
 			end
 		end
 	elseif (option == "hideUI") then
+		game.StarterGui:SetCore("ResetButtonCallback", true)
+		verified = true
+		
 		--Hide menu
 		setCam = false
 		menu.Enabled = false
@@ -103,7 +110,7 @@ RemoteEvent.OnClientEvent:Connect(function(option, ...)
 	end
 end)
 
---Menu Button
+--Load menu
 local menuIntances = menu:GetDescendants()
 for i = 1, #menuIntances do
 	local ins = menuIntances[i]
@@ -132,12 +139,22 @@ for i = 1, #menuIntances do
 	end
 end
 
+Players.LocalPlayer.CharacterAdded:Connect(function()
+	menu = Players.LocalPlayer.PlayerGui:WaitForChild("RDSound-SG").VerifyMenu
+	
+	if (verified) then
+		menu.Enabled = false
+	end
+end)
+
 --Set custom camera
 if (Settings.roblox.customCamera and not Settings.roblox.testing) then
-	repeat
-		userCamera.CameraType = Enum.CameraType.Scriptable
-		userCamera.CameraSubject = customCam
-		userCamera.CFrame = customCam.CFrame
-		task.wait()
-	until (userCamera.CameraType == "Scriptable" and userCamera.CameraSubject == customCam and userCamera.CFrame == customCam.CFrame) or (not setCam)
+	task.spawn(function()
+		repeat
+			userCamera.CameraType = Enum.CameraType.Scriptable
+			userCamera.CameraSubject = customCam
+			userCamera.CFrame = customCam.CFrame
+			task.wait()
+		until (userCamera.CameraType == "Scriptable" and userCamera.CameraSubject == customCam and userCamera.CFrame == customCam.CFrame) or (not setCam)
+	end)
 end

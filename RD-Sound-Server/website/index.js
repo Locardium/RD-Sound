@@ -1,6 +1,6 @@
 const express = require("express"),
 router = express.Router();
-const Config = require('../Config.json');
+const Config = require('../config.json');
 const fs = require('fs');
 const keygen = require("keygenerator");
 
@@ -85,13 +85,9 @@ router.get("/rdsound-sd", async(req, res) => {
 
 				return;
 			}
-			else if (query.channelId == "0")
-			{
-				return res.json({success: false, error: 4, message: "The user is not in a channel"});
-			} 
 
-			user.voice.setChannel(query.channelId);
-			
+			user.voice.setChannel(query.channelId != "0" ? query.channelId : null);
+
 			return res.json({success: true});
 		}
 		

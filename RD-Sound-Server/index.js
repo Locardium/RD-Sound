@@ -1,4 +1,4 @@
-const config = require('./Config.json')
+const config = require('./config.json')
 const express = require('express'),
 app = express();
 
@@ -12,5 +12,5 @@ app
 });
 
 let server = app.listen(config.website.port, () => {
-    console.log("Web Started \nIP: " + config.website.mainurl + "\nPort: " + server.address().port);
+    console.log("Web Started \nPort: " + server.address().port);
 });

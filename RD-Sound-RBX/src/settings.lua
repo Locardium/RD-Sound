@@ -8,7 +8,7 @@ return {
 		}
 	},
 	server = {
-		token = "", --To get the token use the "setup" command and copy the token that was sent to the md or copy it from the bot config file
+		token = "TOKEN", --To get the token use the "setup" command and copy the token that was sent to the md or copy it from the bot config file
 		host = "http://localhost/", --LocalHost only works in Roblox Studio and if you hosting the bot in your computer
 		bot = {
 			prefix = ".", --Bot prefix

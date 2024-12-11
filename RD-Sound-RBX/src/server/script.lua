@@ -3,6 +3,8 @@ local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 local zAPI = require(game.ReplicatedStorage:WaitForChild("RZones-RS").API)
 
+local RemoteEvent = game:GetService("ReplicatedStorage"):WaitForChild("RDSound-RS").RemoteEvent
+
 local function getMainFolder()
 	local mfId = script.Parent:GetAttribute("mfId")
 	if (mfId == nil) then
@@ -53,7 +55,7 @@ local function newPlayers(player)
 
 		if (playerData and playerData.discordId) then
 			local channelId = zAPI.getAttribute(value, "rdsound", "channelId")
-			if (channelId == false) then error("'channelId' not found") end
+			if (channelId == false) then return end
 
 			Functions.sendData("move", {discordId = playerData.discordId, channelId = channelId})
 		end
